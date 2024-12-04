@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 80px;
+    background-color: rgb(245, 243, 243);
+}
+
+.menu {
+    width: 1366px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu label {
+    width: 250px;
+    display: flex;
+    position: relative;
+    left: 20px;
+}
+
+.menu label a {
+    display: flex;
+    align-items: center;
+}
+
+.menu label h1 {
+    color: black;
+    font-family: "Shippori Mincho", serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    position: relative;
+    right: 16px;
+    top: 2px;
+}
+
+.menu label a{
+    text-decoration: none;
+}
+
+.menu img {
+    height: 60px;
+
+}
+
+.menu h1 {
+    font-size: 25px;
+}
+
+.navegation{
+    width: 50vw;
+    display: flex;
+    justify-content: end;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+}
+
+.menu li a:hover{
+    color: gray;
+}
