@@ -4,29 +4,50 @@
     margin: 0;
 }
 
-header{
+.container {
+    width: 1345px;
+    height: 1020px;
+    margin: 0 auto;
+}
+
+.container header {
+    background-color: rgba(255, 255, 255, 0);
+    height: 60px;
+    width: 1345px;
+}
+
+.container h2 {
     height: 80px;
-    background-color: rgb(236, 236, 236);
+    width: 1345px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+header {
+    height: 80px;
+    background-color: rgb(243, 243, 243);
     width: 99vw;
+    position: relative;
 }
 
 .menu {
-    width: 1318px;
+    width: 1345px;
     height: 80px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .menu label {
     width: 250px;
     display: flex;
     position: relative;
-    right: 5px;
-    
+    left: 20px;
 }
 
 .menu label a {
@@ -46,7 +67,7 @@ header{
     width: 200px;
 }
 
-.menu label a{
+.menu label a {
     text-decoration: none;
 }
 
@@ -58,65 +79,54 @@ header{
     font-size: 25px;
 }
 
-.menu ul {
-    list-style-type: none;
-}
-
-.menu li {
-    display: inline;
-}
-
-.menu li a {
+.navegation li a {
     text-decoration: none;
     color: black;
     font-size: 17px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
-    padding-left: 20px;
 }
 
-.menu li a:hover{
+.navegation ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    right: 20px;
+}
+
+.navegation li {
+    display: inline;
+    position: relative;
+    right: 15px;
+}
+
+.navegation li a:hover {
     color: rgb(90, 90, 90);
+    text-decoration: underline;
 }
 
-section .container {
-    width: 1345px;
-    height: 1000px;
-    margin: 0 auto;
-}
-
-.container header{
-    background-color: rgba(255, 255, 255, 0);
-    height: 60px;
-
-}
-
-.container h2{
-    padding-top: 20px;
-    padding-left: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.articles{
+.articles {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     position: relative;
     left: 20px;
-    height: 900px;
-    width: 1345px;
+    top: 20px;
+    width: 100%;
+    max-width: 1345px;
+    margin: auto;
 }
 
-.articles time{
+.articles time {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.623);
 }
 
-.articles article{
-    width: 440px;
-    height: 400px;;
+.articles article {
+    width: calc(33.33% - 10px);
+    height: 460px;
+    box-sizing: border-box;
 }
 
 .articles header {
@@ -127,16 +137,17 @@ section .container {
 }
 
 .articles img {
+    width: 100%;
     height: 230px;
-    width: 400px;
+    object-fit: cover;
 }
 
-.articles h3{
+.articles h3 {
     padding-top: 5px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.articles p{
+.articles p {
     position: relative;
     padding-top: 18px;
     padding-bottom: 10px;
@@ -160,4 +171,90 @@ section .container {
 .articles a:hover {
     background-color: rgb(236, 236, 236);
     color: black;
+}
+
+.linha{
+    width: 98%;
+    height: 2px;
+    background-color: black;
+}
+
+@media (max-width: 1355px) {
+    .container {
+        width: 100%;
+        height: 1480px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1265px) {
+    .articles article {
+        width: calc(50% - 25px);
+        height: 460px;
+        position: relative;
+        left: 10px;
+    }
+
+    .container {
+        width: 100%;
+        height: 1480px;
+    }
+
+    .container h2 {
+        height: 80px;
+        width: 100%;
+    }
+
+    .container header {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 879px) {
+    .articles article {
+        width: 90%;
+        height: 460px;
+        position: relative;
+        left: 10px;
+    }
+
+    .container {
+        width: 100%;
+        height: 2880px;
+    }
+
+    .articles p {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 710px) {
+    header {
+        height: 120px;
+    }
+
+    .container {
+        width: 100%;
+        height: 2870px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+    }
+
+    .navegation {
+        position: relative;
+        left: 6%;
+    }
+
 }
